@@ -1,0 +1,369 @@
+:root {
+  --text-color: #003b4a;
+  --text-color-a: #fff;
+  --contrast-color: #bf0cf0;
+  --contrast-color-a: #e5e1fe;
+  --body-color: #003b4a;
+  --font-alternate: "Montserrat Alternates", sans-serif;
+  --footer-color: #4ba39380;
+  --blockquote-color: #ffd700cc;
+}
+
+.header {
+  background-color: #f1f5f9;
+  align-content: center;
+  padding-bottom: .5rem;
+  font-weight: 600;
+}
+
+.contenido {
+  text-align: center;
+  padding: 0%;
+}
+
+.contenido li {
+  vertical-align: top;
+  display: inline-block;
+}
+
+.perota_menu {
+  color: #fff;
+  box-sizing: border-box;
+  background-color: #000000e6;
+  background-image: url("perota.800c7eeb.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 60vh;
+}
+
+.general {
+  box-sizing: border-box;
+  margin-top: .5rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  padding: .3rem;
+  text-decoration: none;
+}
+
+figure {
+  text-align: left;
+  margin-left: auto;
+  font-size: .6rem;
+}
+
+figure a {
+  color: var(--blockquote-color);
+}
+
+body {
+  font-family: var(--font-alternate), sans-serif;
+  color: var(--contrast-color-a);
+  background-color: var(--body-color);
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: smaller;
+  font-weight: 900;
+  font-family: var(--font-alternate), sans-serif;
+  text-align: center;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  font-size: large;
+}
+
+h3 {
+  font-size: medium;
+}
+
+.portada img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.discos {
+  text-align: left;
+}
+
+.discos li {
+  text-align: justify;
+  padding-top: 1rem;
+  list-style: none;
+}
+
+.discos a, .section1 a {
+  color: var(--blockquote-color);
+}
+
+.boton {
+  background-color: var(--text-color-a);
+  cursor: pointer;
+  border-radius: 155px;
+  align-items: center;
+  padding: 5px;
+  transition: background-color .3s;
+}
+
+.contenido a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.Mas_info p {
+  text-align: end;
+}
+
+.Mas_info a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.album {
+  padding: 1rem;
+}
+
+.info button {
+  background-color: var(--text-color-a);
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 8px;
+  transition: background-color .2s;
+}
+
+.tour a {
+  color: inherit;
+  text-decoration: none;
+  transition: color .3s;
+}
+
+.info button:hover, .boton:hover {
+  background-color: var(--contrast-color);
+  color: #fff;
+}
+
+.boton.activo {
+  text-decoration: underline;
+}
+
+blockquote {
+  border-left: 4px solid var(--blockquote-color);
+  width: 90%;
+  margin: 1rem auto;
+  padding-left: .5rem;
+  font-size: .9rem;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid var(--contrast-color-a);
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: var(--footer-color);
+}
+
+.tour a:hover {
+  color: var(--contrast-color);
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+.mySlides.fade {
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  color: #fff;
+  -webkit-user-select: none;
+  user-select: none;
+  border-radius: 0 3px 3px 0;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all .6s;
+  position: absolute;
+  top: 50%;
+}
+
+.next {
+  border-radius: 3px 0 0 3px;
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: #000c;
+}
+
+.text {
+  color: #f2f2f2;
+  text-align: center;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 15px;
+  position: absolute;
+  bottom: 8px;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  padding: 8px 12px;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  background-color: #bbb;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  margin: 0 2px;
+  transition: background-color .6s;
+  display: inline-block;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+footer {
+  background-color: var(--footer-color);
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.footer_width li {
+  text-align: center;
+  width: 30%;
+}
+
+.redes {
+  margin: 0;
+}
+
+.redes ul {
+  justify-content: center;
+  list-style: none;
+  display: flex;
+}
+
+footer a:hover {
+  color: #a4f479;
+}
+
+footer ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+footer ul li {
+  margin: 0;
+}
+
+.footer_width {
+  text-align: center;
+}
+
+.footer_info {
+  text-align: center;
+  border: .5mm solid red;
+  margin: 0;
+  line-height: normal;
+}
+
+@media screen and (width >= 768px) {
+  .perota_menu {
+    height: 100vh;
+  }
+}
+
+@media screen and (width <= 768px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .album img {
+    width: 100%;
+  }
+
+  .name {
+    margin-left: 0;
+    font-size: 1.3rem;
+  }
+
+  .info button {
+    margin-left: 0;
+  }
+
+  footer {
+    font-size: .8rem;
+  }
+
+  .video iframe {
+    width: 100%;
+    height: 56.25vw;
+  }
+}
+
+@media screen and (width >= 769px) {
+  .video {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .video iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+/*# sourceMappingURL=index.77a9bc14.css.map */
