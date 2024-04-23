@@ -2,7 +2,7 @@
   --text-color: #003b4a;
   --text-color-a: #fff;
   --contrast-color: #bf0cf0;
-  --contrast-color-a: #e5e1fe;
+  --contrast-color-a: #fff;
   --body-color: #003b4a;
   --font-alternate: "Montserrat Alternates", sans-serif;
   --footer-color: #4ba39380;
@@ -12,7 +12,6 @@
 .header {
   background-color: #f1f5f9;
   align-content: center;
-  padding-bottom: .5rem;
   font-weight: 600;
 }
 
@@ -46,14 +45,74 @@
   text-decoration: none;
 }
 
-figure {
-  text-align: left;
-  margin-left: auto;
-  font-size: .6rem;
+.canciones {
+  justify-content: space-between;
+  height: auto;
+  margin-top: 1rem;
+  display: flex;
+  position: relative;
 }
 
-figure a {
+.canciones img {
+  max-width: 50%;
+}
+
+.canciones h3 {
+  text-align: right;
+  align-content: center;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.news {
+  padding: 1rem;
+}
+
+.news a {
   color: var(--blockquote-color);
+}
+
+.news button {
+  flex-direction: column;
+  margin-top: 1rem;
+  display: flex;
+}
+
+.canciones h3 {
+  color: var(--contrast-color-a);
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  color: var(--contrast-color-a);
+}
+
+.canciones > figcaption {
+  width: 100%;
+  margin-top: 1rem;
+  font-size: smaller;
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+
+.portada a {
+  color: var(--blockquote-color);
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+.portada img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 body {
@@ -78,26 +137,6 @@ h2 {
   font-size: large;
 }
 
-h3 {
-  font-size: medium;
-}
-
-.portada img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.discos {
-  text-align: left;
-}
-
-.discos li {
-  text-align: justify;
-  padding-top: 1rem;
-  list-style: none;
-}
-
 .discos a, .section1 a {
   color: var(--blockquote-color);
 }
@@ -111,9 +150,8 @@ h3 {
   transition: background-color .3s;
 }
 
-.contenido a {
-  color: var(--text-color);
-  text-decoration: none;
+.boton_activo {
+  text-decoration: underline;
 }
 
 .Mas_info p {
@@ -129,27 +167,19 @@ h3 {
   padding: 1rem;
 }
 
-.info button {
-  background-color: var(--text-color-a);
-  cursor: pointer;
-  border-radius: 20px;
-  padding: 8px;
-  transition: background-color .2s;
-}
-
 .tour a {
   color: inherit;
   text-decoration: none;
   transition: color .3s;
 }
 
+.tour a:hover {
+  color: var(--contrast-color);
+}
+
 .info button:hover, .boton:hover {
   background-color: var(--contrast-color);
   color: #fff;
-}
-
-.boton.activo {
-  text-decoration: underline;
 }
 
 blockquote {
@@ -173,10 +203,6 @@ th, td {
 
 th {
   background-color: var(--footer-color);
-}
-
-.tour a:hover {
-  color: var(--contrast-color);
 }
 
 .slideshow-container {
@@ -275,21 +301,6 @@ footer a {
   transition: color .2s;
 }
 
-.footer_width li {
-  text-align: center;
-  width: 30%;
-}
-
-.redes {
-  margin: 0;
-}
-
-.redes ul {
-  justify-content: center;
-  list-style: none;
-  display: flex;
-}
-
 footer a:hover {
   color: #a4f479;
 }
@@ -297,7 +308,6 @@ footer a:hover {
 footer ul {
   padding: 0;
   list-style: none;
-  display: flex;
 }
 
 footer ul li {
@@ -308,17 +318,15 @@ footer ul li {
   text-align: center;
 }
 
-.footer_info {
-  text-align: center;
-  border: .5mm solid red;
-  margin: 0;
-  line-height: normal;
+.redes ul {
+  justify-content: center;
+  display: flex;
 }
 
-@media screen and (width >= 768px) {
-  .perota_menu {
-    height: 100vh;
-  }
+.footer_info {
+  text-align: center;
+  margin: 0;
+  line-height: normal;
 }
 
 @media screen and (width <= 768px) {
@@ -330,13 +338,9 @@ footer ul li {
     width: 100%;
   }
 
-  .name {
-    margin-left: 0;
-    font-size: 1.3rem;
-  }
-
-  .info button {
-    margin-left: 0;
+  .info {
+    text-align: end;
+    margin: .5rem;
   }
 
   footer {
@@ -364,6 +368,12 @@ footer ul li {
     position: absolute;
     top: 0;
     left: 0;
+  }
+}
+
+@media screen and (width >= 768px) {
+  .perota_menu {
+    height: 100vh;
   }
 }
 /*# sourceMappingURL=index.77a9bc14.css.map */
